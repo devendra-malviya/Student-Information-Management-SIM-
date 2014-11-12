@@ -52,138 +52,171 @@ function digitsonly(e)
 </script>
 </head>
 <body>
-<body style="background-color:grey;">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6"><img src="2.jpg" height="660" width="520" style='position:fixed'></div>
-			<div class="col-md-6" style="border:1px solid black;background-color:grey;">
-	<label>
-		<h2>Student Registration</h2>
-	</label>
-		<form role="form" method="POST" id="theForm" action="r.php"> 
-	 		<div class="form-group">
-                     <label>Name</label>
-	<div class="row">
- 	 <div class="col-md-4">
-   		 <input type="text" class="form-control" placeholder="FirstName" onkeypress="return onlyChars(event)" name="firstname" id="name"> <span id="nameError" class="red"></span>
-  	</div>
-  	<div class="col-md-4">
-   		 <input type="text" class="form-control" placeholder="MiddleName" onkeypress="return onlyChars(event)" name="midname">
-  	</div>
-  	<div class="col-md-4">
-    		<input type="text" class="form-control" placeholder="LastName" onkeypress="return onlyChars(event)" name="lastname" id="lname"> <span id="lnameError" class="red"></span>
+	<div class="panel panel-primary"  > <!--this div for bootstrap panel -->
+		<div class="panel-heading"><h3 class="panel-title" <br><center><h1>International Institute of Professional Studies<h1></center></h3></div>
+		<div class="panel-body"><!--  Panel content -->
+			<div class="panel panel-default">
 		
-	  </div>
-	</div>
-                   
-	 <div>
-	 <label>Father's Name</label>
-	<input type="text" class="form-control" placeholder="Father Name" onkeypress="return onlyChars(event)" name="fathername" id="fname"><span id="fnameError" class="red"></span>
-	</div>
+		
+		
+				<body style="background-color:white;">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-2"></div>
+							<div class="col-md-8" style="border:1px solid black;background-color:white;">
+								<div class="col-md-2"></div>
+				
+								<center><h2>Personal Information</h2></center>
+				
+								<form role="form" method="POST" id="theForm" action="r.php"> 
+					
+					
+									<div class="form-group">
+					
+										<table border="0" class="table">
+											<tr>
+												<td>
+													<label>Name </label>
+												</td>
+												<td>
+													<div class="row">
+														<div class="col-md-4">
+															<input type="text" class="form-control" placeholder="FirstName" onkeypress="return onlyChars(event)" name="firstname" id="name"> <span id="nameError" class="red"></span>
+														</div>
+							
+														<div class="col-md-4">
+															<input type="text" class="form-control" placeholder="MiddleName" onkeypress="return onlyChars(event)" name="midname">
+														</div>
+														<div class="col-md-4">
+															<input type="text" class="form-control" placeholder="LastName" onkeypress="return onlyChars(event)" name="lastname" id="lname"> <span id="lnameError" class="red"></span>
+														</div>
+													</div>
+												</td>
+											</tr>
+						
+      
+											<tr>
+												<td>
+													<label>Father's Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+												</td>
+												<td>
+													<input type="text" class="form-control" placeholder="Father Name" onkeypress="return onlyChars(event)" name="fathername" id="fname"><span id="fnameError" class="red"></span>
+												</td>
+											</tr> 
 	
-	<div>
-	<label>Mother's Name</label>
-	<input type="text" class="form-control" placeholder="Mother Name" onkeypress="return onlyChars(event)" name="mothername" id="mname"><span id="mnameError" class="red"></span>
-	</div>
-
-	<label>Roll Number</label>
-	<div class="row">
-	<div class="col-md-4"><input type="text" class="form-control" placeholder="IT-2K11-10" name="rollno"></div>
-	</div>
-
-	<div>
-	<label>Choose your username</label>
-	<input type="text" class="form-control" placeholder="username" name="username" id="uname"><span id="unameError" class="red"></span>
-	</div>
-
-	<div>
-	<label>Password</label>
-	<input type="password" class="form-control" placeholder="......" name="pwd" id="passwd">
-	<span id="passwordError" class="red"></span>
-	</div>
+											<tr>
+												<td>
+													<label>Mother's Name</label>
+												</td>
+												<td>
+													<input type="text" class="form-control" placeholder="Mother Name" onkeypress="return onlyChars(event)" name="mothername" id="mname"><span id="mnameError" class="red"></span>
+												</td>
+											</tr>
+    	
+											<tr>
+												<td>
+													<label>BirthDay</label>
+												</td>
+												<td>
+													<div class="row">
+														<div class="col-md-4">
+															<select class="form-control" name="month1">
+																<option>January</option>
+																<option>February</option>
+																<option>March</option>
+																<option>April</option>
+																<option>May</option>
+																<option>June</option>
+																<option>July</option>
+																<option>August</option>
+																<option>September</option>
+																<option>October</option>
+																<option>November</option>
+																<option>December</option>
+															</select>
+														</div>
+													<div class="col-md-4">
+		<select class="form-control" name="date">
+		<script>var i;for(i=1;i<=31;i++){document.write("<option>"+i+"</option>");}</script>
+		</select>
+		</div>
+		<div class="col-md-4">
+		<select class="form-control" name="year">
+		<script>var i;for(i=1950; i<=2014; i++) {document.write("<option>"+i + "</option>");}</script>
+		</select>
+		</div>
+		</div>
+	</td>
 	
-	<div>
-	<label>Confirm Password</label>
-	<input type="password" class="form-control" placeholder="......" name="pwd1" id="pwVerified"><span id="cnfrmpwdError" class="red"></span>
-	</div>
-	
-	<label>BirthDay</label>
-	<div class="row">
-	<div class="col-md-4">
-	<select class="form-control" name="month1">
-  	<option>January</option>
-  	<option>February</option>
-  	<option>March</option>
-  	<option>April</option>
-  	<option>May</option>
-	<option>June</option>
-  	<option>July</option>
-  	<option>August</option>
-  	<option>September</option>
-  	<option>October</option>
-	<option>November</option>
-	<option>December</option>
-	</select>
-	</div>
-	<div class="col-md-4">
-	<select class="form-control" name="date">
-	<script>var i;for(i=1;i<=31;i++){document.write("<option>"+i+"</option>");}</script>
-	</select>
-	</div>
-	<div class="col-md-4">
-	<select class="form-control" name="year">
-	<script>var i;for(i=1950; i<=2014; i++) {document.write("<option>"+i + "</option>");}</script>
-	</select>
-	</div>
-	</div>
+	</tr>
 
-	<label>Gender</label>
-	<div class="row">
+	<tr><td><label>Gender</label></td>
+	<td><div class="row">
 	<div class="col-md-4">
 	<select class="form-control" name="gender">
   	<option>Male</option>
   	<option>Female</option>
+	<option>other</option>
 	</select>
-  	</div>
+  	</div></td>
 	</div>	
-
-	<label>Student's Contact Number</label>
-	<div class="row">
+   
+	<tr><td><label>Student's Contact no.</label></td>
+	<td><div class="row">
 	<div class="col-md-4">
 	<input type="text" class="form-control" placeholder="9876543210" name="studentnumber"
 	onkeypress="return onlyNumbers(event)" maxlength="10">
 	</div>
-	</div>
+	</div></td>
 
-	<label>Guardian's Contact Number</label>
-	<div class="row">
+	<tr><td><label>Guardian's Contact no.</label></td>
+	<td><div class="row">
 	<div class="col-md-4">
 	<input type="text" class="form-control" placeholder="9876543210" name="guardiannumber"
 	onkeypress="return onlyNumbers(event)"  maxlength="10">
 	</div>
+	</div></td>
+	
+	
+	
+	<tr><td><label>Category</label></td>
+	<td><div class="row">
+	<div class="col-md-4">
+	<select class="form-control" name="gender">
+  	<option>ST</option>
+  	<option>SC</option>
+	<option>OBC</option>
+	<option>General</option>
+	</select>
+  	</div></td>
 	</div>
-	<label>Category</label>
-	<div class="row">
+	
+	
+	
+	
+	<!--
+	
+	<tr><td><label>Category</label></td>
+	<td><div class="row">
 	<div class="col-md-4">
 	<input type="text" class="form-control" placeholder="ST/SC/OBC/GENERAL" name="category">
 	</div>
-	</div>
+	</div> </td> </tr>   -->
 
-	<label>Email</label>
- 	<input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email"> 	
+	<tr><td><label>Email</label></td>
+ 	<td><input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email"> 	
+    </td></tr>
+	<tr><td><label>Current Address</label></td>
+ 	<td><textarea class="form-control" rows="3" id="add" name="currentaddress" ></textarea></td>
 
-	<label>Current Address</label>
- 	<textarea class="form-control" rows="3" id="add" name="currentaddress" ></textarea>
-
- 	<label>
+ 	<tr><td colspan="2"><label>
  	<input type="checkbox" style="display:inline;" name="checkme" onclick="Copy(this.form)">
  	<span style="display:inline;">Copy to Permanent Address</span>
- 	</label>
- 	<br>
+ 	</label></td></tr> 	<br>
 
-	<label>Permanent Address</label>
- 	<textarea class="form-control" rows="3" name="permanentaddress" ></textarea>
-
+	<tr><td><label>Permanent Address</label></td>
+ 	<td><textarea class="form-control" rows="3" name="permanentaddress" ></textarea></td>
+             </table>
 			</div>
 		
 			
@@ -192,11 +225,18 @@ function digitsonly(e)
 	-->
 	<input class="btn btn-success" type="submit" value="Submit" id="submit">
 	<input class="btn btn-danger" type="reset" value="Reset">
+		
 		</form>
 
 </div>
 				
 		</div>
+	</div>
+	
+</div>
+</div>	
+
+	<div class="panel-footer"><br>Panel footer<br></div> 
 	</div>
 
 </body>
@@ -205,8 +245,4 @@ function digitsonly(e)
 
 <?php
 $connect=mysql_connect('localhost','root','');
-if($connect)
-	echo "Success";
-else
-	echo "failure";
 ?>
